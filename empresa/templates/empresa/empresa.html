@@ -1,0 +1,51 @@
+{% extends 'inicio/base.html' %}
+{% load static %}
+
+<!-- A PARTIR DE AQUI EL CONTENIDO DE LA EMPRESA -->
+{% block content %}
+
+<header class="masthead">
+    <div class="container h-100">
+        <div class="row h-100 align-items-center justify-content-center text-center">
+            <div class="col-lg-10 align-self-end">
+                <h1 class="text-uppercase text-white font-weight-bold">PAGINA DE EJEMPLO EMPRESA</h1>
+                <hr class="divider my-4" />
+            </div>
+            <div class="col-lg-8 align-self-baseline">
+                <p class="text-white-75 font-weight-light mb-5">Aplicación dentro de Django que importa contenido dinamico de
+                    una base de datos</p>
+                <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">SABER MÁS</a>
+            </div>
+        </div>
+    </div>
+</header>
+
+{% for empre in empresa %}
+
+<section class="page-section" id="contact">
+    <div class="container">
+        <div class="row justify-content-center">
+            <div class="col-lg-8 text-center">
+                <h2 class="mt-0">{{empre.titulo}}</h2>
+                <hr class="divider my-4" />
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
+                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{empre.imagen.url}}" alt="{{anuncio.titulo}}">
+            </div>
+            <div class="col-lg-4 mr-auto text-center">
+                <p>{{ empre.contenido| safe| truncatewords:90|linebreaks }}
+                    <br>{{ empre.created }} || {{ empre.autor }}
+                </p>
+                <p>LEER MÁS...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+{% endfor %}
+{% endblock %}
+
+
+

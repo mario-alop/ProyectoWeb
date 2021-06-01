@@ -1,0 +1,81 @@
+/* Estilos Base */
+/* 1-Fuentes */
+@import url(https://fonts.googleapis.com/css?family=Open+Sans:400,500,300,700);
+* {
+  font-family: Open Sans;
+  box-sizing: border-box;
+}
+@font-face {
+  font-family: Moderne Sans;
+  src: url(https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/moderne_sans.woff2);
+}
+/* Márgenes fondos y contenedor general */
+html, body{
+  margin: 0;
+  padding:0;
+}
+body {
+  background: rgb(240, 238, 238);
+  background-size: cover;
+}
+#contenedor{
+  width: 100%;
+  margin:0;
+  padding: 0;
+}
+
+/* contenido anuncios */
+#content{
+  overflow: hidden; 
+  width: 80%;
+  height:100%; 
+  margin: 10px auto; 
+  border: solid #ccc 0px;
+  padding: 0px 0px 10px 0px;
+}
+#content h1{
+  font-family: Moderne Sans, sans-serif;
+  width: 100%;
+  background: tomato;
+  color: #fff;
+  margin: 0;
+  padding: 5px;
+  font-size: 2rem;
+}
+
+div.individual{
+  width: 50%;
+  float:left;
+  padding: 10px;
+  margin-bottom: 20px;
+}
+
+div.individual p img{
+  width: 100%;
+  margin: 0px;
+  padding: 0px;
+}
+div.individual p{
+  font-family: Open Sans;
+  text-align: justify;
+  padding: 0px;
+}
+span.datos{
+  display:block;
+  font-family: Open Sans; 
+  color:#fff;
+  background-color: tomato;
+}
+a:hover{
+       color: #ffcc00;
+     }
+
+     @media (max-width: 768px) {
+      div.individual {
+        width: 100%;
+      }
+    }
+
+/* Párrafo de cada anuncio */
+
+ 

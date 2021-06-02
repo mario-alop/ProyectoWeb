@@ -24,12 +24,15 @@
         <div class="intro">
             <main id="galeria">
                 <section id="galeria">
-                    <h2 id="galeria">
-                        Galeria
+                    <h2 id="galeria" style="text-align: center;">
+                        Galeria de Imágenes de ejempo.
                     </h2>
+                    <br>
                     <ul id="galeria">
                         {% for inicio in imagen %}
+                        &nbsp; &nbsp; &nbsp;
                         <li>
+                            <br>
                             <a id="galeria" class="link-photo" data-lightbox="img" href="{{inicio.image.url}}"
                                 title="{{inicio.titulo}}">
                                 <img style="height: 200px; width: 270px;" id="galeria" src="{{inicio.image.url}}"
@@ -47,19 +50,4 @@
         </div>
     </div>
 </section>
-<section>
-    <div style="width: 75%; margin: auto; background-color: black; text-align: center; color: white;">
-        Categorías:
-        {% for inicio in imagen %}
-
-            {% for album in inicio.album.all %}
-
-            <a class="linksCategorias" href="{% url 'album' album.id %}">{{ album.nombre }}</a>&nbsp;&nbsp;&nbsp;
-
-            {% endfor %}
-
-        {% endfor %}
-    </div>
-</section>
-
 {% endblock%}

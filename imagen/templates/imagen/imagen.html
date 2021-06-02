@@ -6,37 +6,46 @@
     <div class="container h-100">
         <div class="row h-100 align-items-center justify-content-center text-center">
             <div class="col-lg-10 align-self-end">
-                <h1 class="text-uppercase text-white font-weight-bold">PAGINA DE EJEMPLO EMPRESA</h1>
+                <h1 class="text-uppercase text-white font-weight-bold">EJEMPLO DE GALERIA 2</h1>
                 <hr class="divider my-4" />
             </div>
             <div class="col-lg-8 align-self-baseline">
-                <p class="text-white-75 font-weight-light mb-5">Aplicación dentro de Django que importa contenido dinamico de
-                    una base de datos</p>
+                <p class="text-white-75 font-weight-light mb-5">Aplicación dentro de Django que importa contenido
+                    dinamico de una base de datos, gestión de imagenes con un modulo 'django-thumbs-v2'</p>
                 <a class="btn btn-primary btn-xl js-scroll-trigger" href="#about">SABER MÁS</a>
             </div>
         </div>
     </div>
 </header>
-<main id="galeria">
-    <section id="galeria">
-        <h2 id="galeria">
-            Galeria
-        </h2>
-        <ul id="galeria">
-            {% for inicio in imagen %}
-            <li>
-                <a id="galeria" class="link-photo" data-lightbox="img" href="{{inicio.image.url}}"
-                    title="{{inicio.titulo}}">
-                    <img id="galeria" src="{{inicio.image.url_m}}" alt="{{inicio.titulo}}">
-                </a>
-            </li>
-            {% endfor %}
-        </ul>
+<section class="page-section clearfix">
+    <div class="container">
+        <div class="intro">
+            <main id="galeria">
+                <section id="galeria">
+                    <h2 id="galeria" style="text-align: center;" >
+                        Galeria 2 Imágenes de Ejemplo.
+                    </h2>
+                    <br>
+                    <br>
+                    <ul id="galeria">
+                        {% for inicio in imagen %}
+                        &nbsp; &nbsp;
+                        <li>
+                            <a id="galeria" class="link-photo" data-lightbox="img" href="{{inicio.image.url}}"
+                                title="{{inicio.titulo}}">
+                                <img id="galeria" src="{{inicio.image.url_avatar}}" alt="{{inicio.titulo}}">
+                            </a>
+                        </li>
+                        {% endfor %}
+                    </ul>
 
-    </section>
-</main>
-<script src="{% static 'imagen/js/lightbox.min.js' %}"></script>
-<script>
-    const lb = lightbox();
-</script>
+                </section>
+            </main>
+            <script src="{% static 'imagen/js/lightbox.min.js' %}"></script>
+            <script>
+                const lb = lightbox();
+            </script>
+        </div>
+    </div>
+</section>
 {% endblock%}

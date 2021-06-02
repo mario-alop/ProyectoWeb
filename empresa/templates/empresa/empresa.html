@@ -32,13 +32,13 @@
         </div>
         <div class="row">
             <div class="col-lg-4 ml-auto text-center mb-5 mb-lg-0">
-                <img class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{empre.imagen.url}}" alt="{{anuncio.titulo}}">
+                <br>
+                <br>
+                <img  class="intro-img img-fluid mb-3 mb-lg-0 rounded" src="{{empre.imagen.url}}" alt="{{anuncio.titulo}}">
             </div>
             <div class="col-lg-4 mr-auto text-center">
                 <p>{{ empre.contenido| safe| truncatewords:90|linebreaks }}
-                    <br>{{ empre.created }} || {{ empre.autor }}
                 </p>
-                <p>LEER MÁS...</p>
             </div>
         </div>
     </div>
